@@ -73,22 +73,4 @@ Xh_2, rbm_2 = train_rbm(Xh_1, 128)
 model= train_dense_model(tf.convert_to_tensor(Xh_2), Y_train)
 
 
-'''cnn_model = create_model(X_train)
-cnn_model.compile(Adadelta(),
-                  loss=categorical_crossentropy,
-                  metrics=['accuracy'])
-
-cnn_model.fit(X_train, Y_train,
-              batch_size=batch_size,
-              epochs=epochs,
-              validation_data=(X_test, Y_test))
-
-scores = cnn_model.evaluate(X_test, Y_test)
-print('Test loss:', scores[0])
-print('Test accuracy:', scores[1])
-
-#model_path = os.path.join(os.getcwd(), 'saved_models\rbm_mnist')
-#cnn_model.save(model_path)'''
-
-
 
